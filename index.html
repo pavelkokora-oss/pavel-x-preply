@@ -272,6 +272,8 @@
   .cta .actions a:nth-child(2) { order:-1; background:var(--dark-btn-bg); color:var(--dark-btn-ink); border:var(--btn-border); }
   .cta .actions a:nth-child(1) { background:transparent; color:var(--dark-ink); border:1px solid color-mix(in srgb, var(--dark-ink) 35%, transparent); }
 
+  /* the video pitch is square */
+  .video-card video { aspect-ratio:1/1; }
 </style>
 </head>
 <body>
@@ -286,6 +288,7 @@
       <div>
         <div style="margin-top:36px"><a class="pill" href="https://jobs.ashbyhq.com/preply/e17e2adf-394e-4576-941c-712ea62f5106" target="_blank" rel="noopener" style="text-decoration:none">Re: Staff PM, Preply Pro ↗</a><span class="pill">I&#x27;m based in Barcelona</span></div>
         <h1>Hi, I&#x27;m Pavel.<br>We need to talk. Urgently. It&#x27;s a match <strong>:)</strong></h1>
+        <p class="hero-sub">Give me 1 minute to convince you to meet!</p>
         
         <div class="actions">
           <a class="btn" href="#match">Why is it match? ↓</a>
@@ -295,23 +298,10 @@
       
       <div class="video-wrap">
         <div class="video-card">
-          <div class="video-head"><img class="avatar" src="pavel-avatar.jpg" alt="Pavel"><div><b>Pavel</b><br><small>Candidate · Staff Product Manager, Preply Pro</small></div><div class="vlang-bar" role="group" aria-label="Video language"><button type="button" class="vlang on" data-src="preply-en.mp4" data-poster="preply-en-poster.jpg" data-dur="1:21" data-ratio="544/832">EN</button><button type="button" class="vlang" data-src="preply-ru.mp4" data-poster="preply-ru-poster.jpg" data-dur="1:04" data-ratio="464/664">RU</button></div></div>
-          <video controls playsinline preload="metadata" src="preply-en.mp4" poster="preply-en-poster.jpg" style="aspect-ratio:544/832"></video>
-          <div class="video-foot"><span>Video for Preply</span><span class="vdur">1:21</span></div>
+          <div class="video-head"><img class="avatar" src="pavel-avatar.jpg" alt="Pavel"><div><b>Pavel</b><br><small>Candidate · Staff Product Manager, Preply Pro</small></div></div>
+          <video controls playsinline preload="metadata" src="preply-pitch.mp4" poster="preply-pitch-poster.jpg"></video>
+          <div class="video-foot"><span>Video for Preply</span><span class="vdur">1:00</span></div>
         </div>
-          <script>
-          document.querySelectorAll('.vlang').forEach(function (b) {
-            b.addEventListener('click', function () {
-              var card = b.closest('.video-card'), vid = card.querySelector('video');
-              card.querySelectorAll('.vlang').forEach(function (x) { x.classList.toggle('on', x === b); });
-              vid.pause(); vid.src = b.dataset.src;
-              if (b.dataset.poster) vid.poster = b.dataset.poster;
-              if (b.dataset.ratio) vid.style.aspectRatio = b.dataset.ratio;
-              card.querySelector('.vdur').textContent = b.dataset.dur;
-              vid.load();
-            });
-          });
-          </script>
       </div>
     </div>
   </div>
@@ -326,7 +316,7 @@
         <span class="half-tag">EdTech · AI tutors · Languages · <strong>Freemium</strong></span>
         <h3><a class="half-link" href="https://praktika.ai/" target="_blank" rel="noopener">Praktika.ai ↗</a></h3>
         <p class="half-role">First employee, Product Manager · 2021–2023</p><div class="half-num"><b>$55M ARR</b><span>Praktika today</span></div>
-        <ul><li>Owned the product roadmap for the first 1.5 years, took it to market, reached $20K MRR.</li><li>1.5x+ free trial → paid subscription after adding the OpenAI API and running a bunch of experiments, incl. pricing A/B tests.</li></ul>
+        <ul><li>Owned the product roadmap for the first 1.5 years and took it to market.</li><li>1.5x+ free trial → paid subscription after adding the OpenAI API and running a bunch of experiments, incl. pricing A/B tests.</li></ul>
       </div>
       <div class="half">
         <span class="half-tag">EdTech · Human tutors · STEM</span>
